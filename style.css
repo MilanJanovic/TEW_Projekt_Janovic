@@ -1,0 +1,78 @@
+.results {
+    display: flex;
+    flex-direction: row;
+}
+
+.results div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 20px;
+}
+
+.results div header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results div section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results div section span:nth-child(1) {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.results div section span:nth-child(2) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.notification {
+    display: block;
+    width: 100vw;
+
+    margin: 0px 20px;
+
+    opacity: 0;
+}
+
+.shown {
+    opacity: 1;
+}
+
+
+body {
+    background: url('new-history-forecast-bulk.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+}
+
+.alert {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.list-group {
+    margin-top: 0em;
+}
+
+.alert-primary {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 3em;
+}
+

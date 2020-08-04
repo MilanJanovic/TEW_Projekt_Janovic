@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocasicko</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "flex-container">
+        <div class = "row">
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="jumbotron my-5">
+                        <h1 class="display-4"><i class="fa fa-sun"></i> WEATHER FORECAST APP</h1>
+                        <p class="lead">Get weather forecast for your city...</p>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                        <!--Vyhledavani-->   
+                            <div class="input-group mb-3">
+                                <input id="search-input" type="text" class="form-control" placeholder="Enter city..." aria-label="Input city"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+
+                        <div class="col-3 text-center">
+                                <button type="button" id="translateBtn" class="btn btn-primary btn-block" onclick="search()">Get weather forecast <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" id="clear_btn" class="btn btn-primary btn-block " onclick="clearLs()">Clear previous searches <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" >
+                    <!--Element ve kterem se zobrazuji errory z volani API-->
+                    <aside class="alert alert-danger" id="notification"></aside>
+
+                    <!--Element ve kterym jsou vysledky-->
+                    <div class="results" id="results">
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-3">
+                <div class="container">
+                    <div class = "alert alert-primary text-center">
+                        HISTORY
+                    </div>
+
+                    <div class = "container" id="list_group_fav_cont">
+                        <div class = "list-group text-center" id="list_group_fav">
+                            
+                        </div>
+                    </div>
+
+                    <div class = "container" id="clear_fav_cont">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
